@@ -8,6 +8,9 @@ def poc(target):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
     }
+    target = target.strip()
+    if not target.startswith(('http://', 'https://')):
+        target = 'http://' + target
     try:
         res1=requests.get(url=target,headers=headres,verify=False)
         if res1.status_code == 200:
