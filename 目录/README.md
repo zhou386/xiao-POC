@@ -59,3 +59,4 @@ python script.py -u http://target-ip:port
 
 ## 结果文件
 检测到的漏洞目标会保存至当前目录的`result1.txt`，可用于后续处理或报告生成。
+##仅用于学习
