@@ -26,7 +26,7 @@ def poc(target):
         pass
 def main():
     #定义
-    parser=argparse.ArgumentParser(description="H3C网管系统存在文件读取漏洞")
+    parser=argparse.ArgumentParser(description="智联云采系统任意文件读取漏洞")
     # 添加命令行参数
     parser.add_argument('-u','--url',dest='url',type=str,help='place input lik')
     parser.add_argument('-f','--file',dest='file',type=str,help='place input your le path')
